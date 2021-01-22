@@ -1,0 +1,63 @@
+Soal 1
+
+create database myshop;
+use myshop;
+
+Soal 2
+
+
+create table myshop (
+id int AUTO_INCREMENT PRIMARY KEY ,
+name varchar(255),
+email varchar(255),
+password varchar(255));
+
+create table categories(
+id int AUTO_INCREMENT PRIMARY KEY, 
+name varchar(255));
+
+create table items(
+ id int auto_increment,
+ name varchar(255),
+ description varchar(255),
+ price int,
+ stock int,
+ category_id int,
+primary key (id),
+foreign key (category_id) references categories(id)
+);
+
+Soal 3
+
+insert users (name,email,password) values
+('John Doe','john@doe.com','john123'),
+('Jane Doe','jane@doe.com','jenita123');
+
+
+insert into categories (name) values
+('gadget'),
+('cloth'),
+('men'),
+('women'),
+('branded');
+
+insert into items (name,description,price,stock,category_id) values 
+('Sumsang b50','hape keren dari merek sumsang','4000000','100','1'),
+('Uniklooh','baju keren dari brand ternama','500000','50','2'),
+('IMHO Watch','jam tangan anak yang jujur banget','2000000','10','1');
+
+Soal 4
+
+select id,name,email from users;
+
+select * from items where price > 1000000;
+select * from items where name like '%uniklo%';
+
+select a.name,a.description, a.price, a.stock, a.category_id, b.name as kategori from items a, categories b where a.category_id=b.id;
+
+Soal 5
+
+update items set price='2500000' where name like '%sumsang%';
+
+
+
