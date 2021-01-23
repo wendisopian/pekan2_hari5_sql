@@ -6,7 +6,7 @@ use myshop;
 Soal 2
 
 
-create table myshop (
+create table users (
 id int AUTO_INCREMENT PRIMARY KEY ,
 name varchar(255),
 email varchar(255),
