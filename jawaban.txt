@@ -29,7 +29,7 @@ foreign key (category_id) references categories(id)
 
 Soal 3
 
-insert users (name,email,password) values
+insert into users (name,email,password) values
 ('John Doe','john@doe.com','john123'),
 ('Jane Doe','jane@doe.com','jenita123');
 
